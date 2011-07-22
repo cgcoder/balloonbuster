@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>chicken.png</Source>
+      <Name>chicken</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\chicken.xnb</Output>
+      <Time>2011-06-12T02:01:04.8890687-07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu_background.png</Source>
+      <Name>menu_background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\menu_background.xnb</Output>
+      <Time>2011-06-13T23:46:26.7389671-07:00</Time>
+    </Item>
+    <Item>
+      <Source>buttonBg.png</Source>
+      <Name>buttonBg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\buttonBg.xnb</Output>
+      <Time>2011-06-15T01:37:53.6932932-07:00</Time>
+    </Item>
+    <Item>
+      <Source>playBg.png</Source>
+      <Name>playBg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\playBg.xnb</Output>
+      <Time>2011-06-29T01:10:06.0040477-07:00</Time>
+    </Item>
+    <Item>
+      <Source>green_balloon.png</Source>
+      <Name>green_balloon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\green_balloon.xnb</Output>
+      <Time>2011-06-29T01:18:23.6575118-07:00</Time>
+    </Item>
+    <Item>
+      <Source>title.png</Source>
+      <Name>title</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\title.xnb</Output>
+      <Time>2011-06-30T01:32:54.9187285-07:00</Time>
+    </Item>
+    <Item>
+      <Source>red_balloon.png</Source>
+      <Name>red_balloon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\red_balloon.xnb</Output>
+      <Time>2011-07-04T15:40:22.8568429-07:00</Time>
+    </Item>
+    <Item>
+      <Source>red_balloon_gift.png</Source>
+      <Name>red_balloon_gift</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\red_balloon_gift.xnb</Output>
+      <Time>2011-07-08T00:44:47.7790053-07:00</Time>
+    </Item>
+    <Item>
+      <Source>gift.png</Source>
+      <Name>gift</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\gift.xnb</Output>
+      <Time>2011-07-09T20:57:45.6492303-07:00</Time>
+    </Item>
+    <Item>
+      <Source>red_green_yellow_balloon.png</Source>
+      <Name>red_green_yellow_balloon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\red_green_yellow_balloon.xnb</Output>
+      <Time>2011-07-13T23:47:33.9883317-07:00</Time>
+    </Item>
+    <Item>
+      <Source>yellow_balloon.png</Source>
+      <Name>yellow_balloon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\yellow_balloon.xnb</Output>
+      <Time>2011-07-13T23:53:24.241365-07:00</Time>
+    </Item>
+    <Item>
+      <Source>menuText.spritefont</Source>
+      <Name>menuText</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\menuText.xnb</Output>
+      <Time>2011-06-16T00:58:52.8317475-07:00</Time>
+    </Item>
+    <Item>
+      <Source>scoreText.spriteFont</Source>
+      <Name>scoreText</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\scoreText.xnb</Output>
+      <Time>2011-06-26T00:34:11.9242593-07:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>WindowsPhone</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBallContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBallContent\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T09:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T09:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T09:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T09:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T09:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T09:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2010-10-19T21:57:37.5375515-07:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

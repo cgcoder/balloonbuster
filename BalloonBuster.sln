@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalloonBuster", "ZipBall\ZipBall\BalloonBuster.csproj", "{B1CAB0A8-A489-4614-978C-40FD9719177D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipBallContent", "ZipBall\ZipBallContent\ZipBallContent.contentproj", "{80C432FE-AEE3-4B60-B0BE-98409F8F8894}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1CAB0A8-A489-4614-978C-40FD9719177D}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{B1CAB0A8-A489-4614-978C-40FD9719177D}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{B1CAB0A8-A489-4614-978C-40FD9719177D}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{B1CAB0A8-A489-4614-978C-40FD9719177D}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{B1CAB0A8-A489-4614-978C-40FD9719177D}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{B1CAB0A8-A489-4614-978C-40FD9719177D}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{80C432FE-AEE3-4B60-B0BE-98409F8F8894}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{80C432FE-AEE3-4B60-B0BE-98409F8F8894}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
