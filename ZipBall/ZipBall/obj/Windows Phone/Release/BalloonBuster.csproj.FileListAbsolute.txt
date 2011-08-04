@@ -25,3 +25,9 @@ C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\obj\Windows Phone\Release\WMAppMan
 bin\Windows Phone\Release\balloon_icon.png
 C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\ZipBall.xap
 C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\obj\Windows Phone\Release\XapCacheFile.xml
+C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\explosive.xnb
+C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\gameover.xnb
+C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\pause.xnb
+C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\pausetext.xnb
+C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\score_background.xnb
+C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\about_background.xnb

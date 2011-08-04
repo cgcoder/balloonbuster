@@ -242,7 +242,10 @@ namespace Juicy
 
         public void clearTransforms()
         {
-            transforms.Clear();
+            if (transforms != null)
+            {
+                transforms.Clear();
+            }
         }
 
         public virtual void onTouch(TouchLocation l)

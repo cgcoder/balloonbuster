@@ -38,6 +38,11 @@ namespace ZipBall
         {
         }
 
+        public SpriteFont DefaultFont
+        {
+            get { return menuFont; }
+        }
+
         public SpriteFont MenuFont
         {
             get { return menuFont; }

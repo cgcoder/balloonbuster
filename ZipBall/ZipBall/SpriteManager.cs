@@ -21,7 +21,10 @@ namespace Juicy
         public void LoadSprite(string resc)
         {
             Texture2D spr = conMan.Load<Texture2D>(resc);
-            assets.Add(resc, spr);
+            if (!assets.ContainsKey(resc))
+            {
+                assets.Add(resc, spr);
+            }
         }
 
         public Texture2D GetSprite(string asset)

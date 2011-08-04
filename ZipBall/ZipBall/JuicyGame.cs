@@ -25,6 +25,8 @@ namespace Juicy
         protected SpriteManager spriteManager;
         protected JuicyScreen currentScreen;
         protected bool isPaused;
+        protected long CurrentFrame;
+        protected ScoreManager scoreManagerObj;
 
         public JuicyGame()
         {
@@ -32,6 +34,14 @@ namespace Juicy
             Content.RootDirectory = "Content";
             screens = new Dictionary<int, JuicyScreen>();
             this.IsMouseVisible = true;
+            CurrentFrame = 0;
+
+            scoreManagerObj = new ScoreManager();
+        }
+
+        public long CurrentFrameTime
+        {
+            get { return CurrentFrame; }
         }
 
         public GraphicsDeviceManager Graphics
@@ -59,6 +69,11 @@ namespace Juicy
             isPaused = false;
         }
 
+        public ScoreManager ScoreManager
+        {
+            get { return scoreManagerObj; }
+        }
+
         public virtual void AddScreen(int id, JuicyScreen scr)
         {
             screens.Add(id, scr);
@@ -68,15 +83,15 @@ namespace Juicy
         public void SetCurrentScreen(int id)
         {
             currentScreen = screens[id];
+            currentScreen.ScreenBecomesCurrent();
         }
 
         protected virtual void AddScreens()
         {
-            
             AddScreen(1, new MenuScreen("menu_background"));
             AddScreen(2, new PlayScreen("playBg"));
-            SetCurrentScreen(1);
-        
+            AddScreen(3, new HighScoreScreen("score_background"));
+            AddScreen(4, new AboutGame("about_background"));
         }
 
         protected override void Initialize()
@@ -89,6 +104,7 @@ namespace Juicy
             }
 
             base.Initialize();
+            ScoreManager.CheckAndLoad();
         }
 
         /// <summary>
@@ -106,14 +122,13 @@ namespace Juicy
             foreach (KeyValuePair<int, JuicyScreen> pair in screens)
             {
                 pair.Value.LoadContent(this.Content);
-            }
-
-            foreach (KeyValuePair<int, JuicyScreen> pair in screens)
-            {
                 pair.Value.UpdateSpriteReferences(spriteManager);
+                pair.Value.AfterSpriteLoad();
             }
-
+            
             TouchPanel.EnabledGestures = GestureType.VerticalDrag;
+
+            SetCurrentScreen(1);
         }
 
         protected override void UnloadContent()
@@ -128,7 +143,7 @@ namespace Juicy
         protected override void Update(GameTime gameTime)
         {
             // Allows the game to exit
-            
+            CurrentFrame++;
             TouchCollection touchLocations = TouchPanel.GetState();
 
             if (TouchPanel.IsGestureAvailable && currentScreen != null)

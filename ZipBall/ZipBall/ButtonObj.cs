@@ -62,6 +62,8 @@ namespace Juicy
 
         public override void Draw(SpriteBatch batch)
         {
+            if (!visible) return;
+
             base.Draw(batch);
             batch.DrawString(font, text, pos, Color.White);
         }

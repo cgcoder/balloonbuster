@@ -83,14 +83,17 @@
     <Reference Include="System.Net">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Xml.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutGame.cs" />
     <Compile Include="AnimationSequence.cs" />
     <Compile Include="BalloonObj.cs" />
     <Compile Include="ButtonObj.cs" />
     <Compile Include="FrameAnimator.cs" />
     <Compile Include="GameConfig.cs" />
     <Compile Include="GameObj.cs" />
+    <Compile Include="HighScoreScreen.cs" />
     <Compile Include="ITransform.cs" />
     <Compile Include="JuicyControl.cs" />
     <Compile Include="JuicyGame.cs" />

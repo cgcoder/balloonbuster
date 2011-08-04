@@ -16,6 +16,9 @@ namespace Juicy
         protected Texture2D backgroundImg;
         protected Rectangle backgroundRect;
 
+        // objects to appear on the top!
+        protected List<GameObj> screenObjects;
+
         private List<GameObj> tempList;
         private List<GameObj> tempAddlist;
 
@@ -23,6 +26,7 @@ namespace Juicy
 
         public JuicyScreen() : this(null)
         {
+            
         }
 
         public JuicyScreen(string bgResName)
@@ -30,8 +34,14 @@ namespace Juicy
             gameObjects = new List<GameObj>();
             tempAddlist = new List<GameObj>();
             tempList = new List<GameObj>();
+            screenObjects = new List<GameObj>();
 
             this.backgroundResName = bgResName;
+        }
+
+        public void addScreenObject(GameObj obj)
+        {
+            screenObjects.Add(obj);
         }
 
         public void addObject(GameObj obj)
@@ -53,8 +63,25 @@ namespace Juicy
             this.game = game;
         }
 
+        public virtual void ScreenBecomesCurrent()
+        {
+
+        }
+
+        public virtual void LoadSprites(ContentManager conMan)
+        {
+
+        }
+
+        public virtual void AfterSpriteLoad()
+        {
+
+        }
+
         public virtual void LoadContent(ContentManager conMan)
         {
+            LoadSprites(conMan);
+
             if (backgroundResName != null)
             {
                 backgroundImg = game.Content.Load<Texture2D>(backgroundResName);
@@ -86,11 +113,23 @@ namespace Juicy
             {
                 go.UpdateSpriteReference(manager);
             }
+
+            foreach (GameObj go in screenObjects)
+            {
+                go.UpdateSpriteReference(game.SprManager);
+            }
         }
 
         public virtual void Update(long time)
         {
             int i = 0;
+
+            foreach (GameObj go in screenObjects)
+            {
+                go.Update(time);
+                if (go.MarkForDelete)
+                    tempList.Add(go);
+            }
 
             foreach (GameObj go in gameObjects)
             {
@@ -102,7 +141,10 @@ namespace Juicy
 
             foreach (GameObj o in tempList)
             {
-                gameObjects.Remove(o);
+                if (!gameObjects.Remove(o))
+                {
+                    screenObjects.Remove(o);
+                }
             }
             tempList.Clear();
 
@@ -124,6 +166,12 @@ namespace Juicy
             {
                 go.Draw(batch);
             }
+            //TODO: refactor to accomodate z-rodering
+            // now draw screen objects so that they appear on top..
+            foreach (GameObj go in screenObjects)
+            {
+                go.Draw(batch);
+            }
         }
 
         public virtual void HandleTouch(TouchCollection tc)
@@ -131,7 +179,23 @@ namespace Juicy
             TouchLocation tl = tc[0];
             Vector2 pos = tl.Position;
 
-            foreach (GameObj go in gameObjects)
+            // handle touch for game objects, only if game is not paused
+            if (!game.IsPaused)
+            {
+                foreach (GameObj go in gameObjects)
+                {
+                    if (!go.Touchable || !go.Visible) continue;
+
+                    if (go.Position.X <= pos.X && go.Position.Y <= pos.Y &&
+                        go.Position.X + go.W >= pos.X && go.Position.Y + go.H >= pos.Y)
+                    {
+                        go.onTouch(tl);
+                    }
+                }
+            }
+
+            // for screen objects always handle event
+            foreach (GameObj go in screenObjects)
             {
                 if (!go.Touchable || !go.Visible) continue;
 
@@ -141,6 +205,13 @@ namespace Juicy
                     go.onTouch(tl);
                 }
             }
+        }
+
+        public void ClearObjects(bool onlyGameObjs)
+        {
+            gameObjects.Clear();
+            if (!onlyGameObjs)
+                screenObjects.Clear();
         }
 
         public virtual void HandleGesture(GestureSample gs)

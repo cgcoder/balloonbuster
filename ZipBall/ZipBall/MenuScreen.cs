@@ -39,22 +39,18 @@ namespace ZipBall
 
             menuButtons[0] = new ButtonObj("Play");
             menuButtons[0].SpriteName = "buttonBg";
-            menuButtons[0].Position = new Vector2(-250, 200);
             menuButtons[0].TouchNotifier = touchEvent;
 
             menuButtons[1] = new ButtonObj("High Score");
             menuButtons[1].SpriteName = "buttonBg";
-            menuButtons[1].Position = new Vector2(-250, 270);
             menuButtons[1].TouchNotifier = touchEvent;
 
             menuButtons[2] = new ButtonObj("About");
             menuButtons[2].SpriteName = "buttonBg";
-            menuButtons[2].Position = new Vector2(-250, 340);
             menuButtons[2].TouchNotifier = touchEvent;
 
             menuButtons[3] = new ButtonObj("Exit");
             menuButtons[3].SpriteName = "buttonBg";
-            menuButtons[3].Position = new Vector2(-250, 410);
             menuButtons[3].TouchNotifier = touchEvent;
 
             foreach (ButtonObj bo in menuButtons)
@@ -68,53 +64,73 @@ namespace ZipBall
             titleObj.SpriteName = "title";
             base.addObject(titleObj);
         }
-
-        public override void LoadContent(ContentManager conMan)
+        // first call back, 2. update sprites, 3. afterspriteload
+        public override void LoadSprites(ContentManager conMan)
         {
-            base.LoadContent(conMan);
+            base.LoadSprites(conMan);
 
             game.SprManager.LoadSprite("buttonBg");
             game.SprManager.LoadSprite("title");
-           
+        }
+
+        public override void AfterSpriteLoad()
+        {
+            base.AfterSpriteLoad();
+
             foreach (ButtonObj bo in menuButtons)
             {
                 bo.Font = GameConfig.me().MenuFont;
             }
-        }
-        
-        public override void UpdateSpriteReferences(SpriteManager manager)
-        {
-            base.UpdateSpriteReferences(manager);
 
             titleObj.UpdatePosition((game.Graphics.PreferredBackBufferWidth - titleObj.W) / 2,
                 30);
 
-            moveCenter = new LinearTransform(0, 15, (game.Graphics.PreferredBackBufferWidth + menuButtons[0].W) / 2,
+            moveCenter = new LinearTransform(0, 10, (game.Graphics.PreferredBackBufferWidth + menuButtons[0].W) / 2,
                     0);
             moveCenter.AutoReset = false;
             moveCenter.TransformCompleteEventHandler = moveToCenterComplete;
 
-            moveOut = new LinearTransform(0, 15, game.Graphics.PreferredBackBufferWidth/2 + menuButtons[0].W, 0);
+            moveOut = new LinearTransform(0, 10, game.Graphics.PreferredBackBufferWidth / 2 + menuButtons[0].W, 0);
             moveOut.AutoReset = false;
             moveOut.TransformCompleteEventHandler = moveOutCenterComplete;
+        }
+
+        public override void ScreenBecomesCurrent()
+        {
+            moveCenter.Reset();
+            moveOut.Reset();
+
+            menuButtons[0].Position = new Vector2(-250, 200);
+            menuButtons[1].Position = new Vector2(-250, 270);
+            menuButtons[2].Position = new Vector2(-250, 340);
+            menuButtons[3].Position = new Vector2(-250, 410);
 
             foreach (ButtonObj bo in menuButtons)
             {
+                bo.clearTransforms();
                 bo.AddTransform(moveCenter);
                 bo.DisableTransform = true;
             }
 
             menuButtons[0].DisableTransform = false;
-        }
 
+        }
 
         public void moveOutCenterComplete(ITransform t)
         {
             moveToCenterComplete(t);
             if (currentMenuButton == 0)
             {
-                game.SetCurrentScreen(nextScreeen);
+                if (nextScreeen < 0)
+                {
+                    game.Exit();
+                }
+                else
+                {
+                    game.SetCurrentScreen(nextScreeen);
+                }
             }
+
         }
 
         public void moveToCenterComplete(ITransform t)
@@ -156,15 +172,18 @@ namespace ZipBall
                 }
                 else if (go == menuButtons[1])
                 {
-                    Guide.BeginShowKeyboardInput(PlayerIndex.One, "Name", "Enter Name: ", "Noname",
-                        delegate(IAsyncResult r)
-                        {
-                            string s = Guide.EndShowKeyboardInput(r);
-                        }, null);
+                    nextScreeen = 3;
+                    startMenuHiding();
                 }
                 else if (go == menuButtons[3])
                 {
-                    game.Exit();
+                    nextScreeen = -1;
+                    startMenuHiding();
+                }
+                else if (go == menuButtons[2])
+                {
+                    nextScreeen = 4;
+                    startMenuHiding();
                 }
             }
         }

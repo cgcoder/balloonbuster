@@ -119,6 +119,51 @@
       <Time>2011-07-19T22:26:49.1557559-07:00</Time>
     </Item>
     <Item>
+      <Source>explosive.png</Source>
+      <Name>explosive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\explosive.xnb</Output>
+      <Time>2011-07-22T22:42:19.6745901-07:00</Time>
+    </Item>
+    <Item>
+      <Source>gameover.png</Source>
+      <Name>gameover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\gameover.xnb</Output>
+      <Time>2011-07-24T22:28:53.3924263-07:00</Time>
+    </Item>
+    <Item>
+      <Source>pause.png</Source>
+      <Name>pause</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\pause.xnb</Output>
+      <Time>2011-07-23T23:19:10.7263479-07:00</Time>
+    </Item>
+    <Item>
+      <Source>pausetext.png</Source>
+      <Name>pausetext</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\pausetext.xnb</Output>
+      <Time>2011-07-24T02:18:57.6933271-07:00</Time>
+    </Item>
+    <Item>
+      <Source>score_background.png</Source>
+      <Name>score_background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\score_background.xnb</Output>
+      <Time>2011-07-24T21:25:36.7682718-07:00</Time>
+    </Item>
+    <Item>
       <Source>menuText.spritefont</Source>
       <Name>menuText</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -135,6 +180,15 @@
       <Options>None</Options>
       <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\scoreText.xnb</Output>
       <Time>2011-06-26T00:34:11.9242593-07:00</Time>
+    </Item>
+    <Item>
+      <Source>about_background.png</Source>
+      <Name>about_background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gopi\code\vc\ZipBall\ZipBall\ZipBall\bin\Windows Phone\Release\Content\about_background.xnb</Output>
+      <Time>2011-07-30T11:37:13.814275-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

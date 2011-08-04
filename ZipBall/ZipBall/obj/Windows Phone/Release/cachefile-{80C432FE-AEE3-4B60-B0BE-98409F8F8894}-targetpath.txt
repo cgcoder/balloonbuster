@@ -11,5 +11,11 @@ Content\red_balloon_triple.xnb
 Content\green_balloon.xnb
 Content\gift.xnb
 Content\awesome.xnb
+Content\explosive.xnb
+Content\gameover.xnb
+Content\pause.xnb
+Content\pausetext.xnb
+Content\score_background.xnb
 Content\menuText.xnb
 Content\scoreText.xnb
+Content\about_background.xnb
